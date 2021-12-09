@@ -1,8 +1,8 @@
 import random
 import sys
-from colorama import Fore
-import pyfiglet
 
+import pyfiglet
+from colorama import Fore
 import os
 black = '\033[30m'
 red = '\033[31m'
@@ -25,9 +25,9 @@ ran = random.choice(all_col)
 
 def banner():
         os.system("clear")
-        en = pyfiglet.figlet_format("Password\nGenerator\n")
-        print(ran, en)
-        print(ran + "\n\t\tV_1.0\t\n\n")
+
+        print(ran, pyfiglet.figlet_format("Password\nGenerator"))
+        print(ran + "\n\t\tV_1.2\t\n\n")
 
         print(Fore.CYAN, "- " * 4, " [+] Follow me on Instagram @saadkhan041 ", "- " * 4)
         print(Fore.LIGHTYELLOW_EX, "\n", "- " * 4, " [+] Follow me on Instagram @coding_memz ", "- " * 4)
@@ -35,8 +35,7 @@ def banner():
 
 
 banner()
-r_num = random.randint(1000,9999)
-r_num=str(r_num)
+
 
 
 def exit():
@@ -59,7 +58,23 @@ def program():
 
                 print(ran+"\n\t\tWait it might take some seconds- - - - - -")
                 file = open("passwords.txt", "a+")
+                file.write(id + id + "\n")
+                file.write(dob + id + "\n")
+                file.write(id + p_num + "\n")
+                file.write(id + company + "\n")
+                file.write(id + any + "\n")
+                file.write(id + city + "\n")
+                file.write(city + dob + "\n")
+                file.write(city + p_num + "\n")
+                file.write(any + city + "\n")
+                file.write(dob + country + "\n")
+                file.write(dob + any + "\n")
+                file.write(ig + any + "\n")
+                file.write(ig + "\n")
+                file.write(dob + "\n")
                 for i in range(amount):
+                        r_num = random.randint(0000, 99999)
+                        r_num = str(r_num)
 
                         file.write(id+r_num+"\n")
                         file.write(p_num+r_num+"\n")
@@ -69,17 +84,8 @@ def program():
                         file.write(city+r_num+"\n")
                         file.write(country+r_num+"\n")
                         file.write(any+r_num+"\n")
-                        file.write(p_num+id+"\n")
-                        file.write(dob + id+"\n")
-                        file.write(id+p_num+"\n")
-                        file.write(id+company+"\n")
-                        file.write(id+any+"\n")
-                        file.write(id+city+"\n")
-                        file.write(city+dob+"\n")
-                        file.write(city+p_num+"\n")
-                        file.write(any+city+"\n")
-                        file.write(dob+country+"\n")
-                        file.write(dob+any+"\n")
+
+
                         file.write(r_num+any+"\n")
                         file.write( r_num+id +"\n")
                         file.write( r_num+ p_num+"\n")
@@ -89,34 +95,27 @@ def program():
                         file.write( r_num+ city+"\n")
                         file.write(r_num +country +"\n")
                         file.write(r_num + r_num + "\n")
-                        file.write(id + id + "\n")
+
                         file.write(r_num + any+"\n")
-                        file.write(ig+ any + "\n")
-                        file.write(ig+ "\n")
-                        file.write(dob+"\n")
 
-
-
+                print(ran + "\nSaved in passswords.txt")
 
 
         else:
 
                 print(ran + "\n\t\tWait it might take some seconds- - - - - -")
                 file = open("passwords.txt", "a+")
+                file.write(id + id + "\n")
                 for i in range(amount):
+                            r_num = random.randint(1000, 9999)
+                            r_num = str(r_num)
                             file = open("passwords.txt", "a+")
                             file.write(id + r_num + "\n")
                             file.write(r_num + r_num + "\n")
-                            file.write(id + id + "\n")
+
                             file.write(r_num+id + "\n")
 
-
-
                 print(ran + "\nSaved in passswords.txt")
-
-
-
-
 
 cont =" "
 while cont != "n" and "no":
