@@ -2,39 +2,28 @@ import random
 import sys
 
 import pyfiglet
-from colorama import Fore
+from colorama import Fore,Style
 import os
-black = '\033[30m'
-red = '\033[31m'
-green = '\033[32m'
-orange = '\033[33m'
-blue = '\033[34m'
-purple = '\033[35m'
-cyan = '\033[36m'
-lightgrey = '\033[37m'
-darkgrey = '\033[90m'
-lightred = '\033[91m'
-lightgreen = '\033[92m'
-yellow = '\033[93m'
-lightblue = '\033[94m'
-pink = '\033[95m'
-lightcyan = '\033[96m'
-all_col = [red, green, orange, cyan, lightred, lightgreen, yellow, lightcyan,lightblue,pink]
+all_col= [Style.BRIGHT+Fore.RED,Style.BRIGHT+Fore.CYAN,Style.BRIGHT+Fore.LIGHTCYAN_EX, Style.BRIGHT+Fore.LIGHTBLUE_EX, Style.BRIGHT+Fore.LIGHTCYAN_EX,Style.BRIGHT+Fore.LIGHTMAGENTA_EX,Style.BRIGHT+Fore.LIGHTYELLOW_EX]
+
 ran = random.choice(all_col)
 
 
+
 def banner():
-        os.system("clear")
+    os.system("clear")
 
-        print(ran, pyfiglet.figlet_format("Password\nGenerator"))
-        print(ran + "\n\t\tV_1.2\t\n\n")
+    print(ran, pyfiglet.figlet_format("\tPrivate\n\tBook"))
+    print(ran + "\t\tV_3.0\t\n\n")
+    print("*" * 63)
 
-        print(Fore.CYAN, "- " * 4, " [+] Follow me on Instagram @saadkhan041 ", "- " * 4)
-        print(Fore.LIGHTYELLOW_EX, "\n", "- " * 4, " [+] Follow me on Instagram @coding_memz ", "- " * 4)
-        print(Fore.LIGHTRED_EX, "\n", "- " * 4, "[+] Github: https://github.com/Saadkhan041/ ", "- " * 3)
-
+    print(Style.BRIGHT + Fore.LIGHTCYAN_EX, "\n", "- " * 4, " [+] Follow me on Instagram @saadkhan041 ", "- " * 4)
+    print(Style.BRIGHT + Fore.LIGHTYELLOW_EX, "\n", "- " * 4, " [+] Follow me on Instagram @coding_memz ", "- " * 4)
+    print(Style.BRIGHT + Fore.LIGHTRED_EX, "\n", "- " * 4, "[+] Github: https://github.com/Saadkhan041/ ", "- " * 3)
+    print("\n", "*" * 63)
 
 banner()
+
 
 
 
@@ -117,14 +106,24 @@ def program():
 
                 print(ran + "\nSaved in passswords.txt")
 
+def view():
+    file = open("passwords.txt","r")
+    read = file.read()
+    print(ran + "\n\t\tThis is what i found: \n")
+
+    print(all_col[2%6] + read)
+
 cont =" "
 while cont != "n" and "no":
-    print(Fore.LIGHTYELLOW_EX + "\n\t\t[1] Generate Passwords\n\t\t[2] Exit\n ")
+    print(Fore.LIGHTYELLOW_EX + "\n\t\t[1] Generate Passwords\n\t\t[2] View Generated passwords\n\t\t[3] Exit\n ")
 
     choice = input(ran + "Enter your choice: ")
     if choice == "1":
         program()
+
     elif choice == "2":
+        view()
+    elif choice == "3":
         print(ran + "\n\tDont Forget to do following tasks :-)\t\n")
         print(Fore.CYAN, "- " * 4, " [+] Follow me on Instagram @saadkhan041 ", "- " * 4)
         print(Fore.LIGHTYELLOW_EX, "\n", "- " * 4, " [+] Follow me on Instagram @coding_memz ", "- " * 4)
