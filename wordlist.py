@@ -13,7 +13,7 @@ ran = random.choice(all_col)
 def banner():
     os.system("clear")
 
-    print(ran, pyfiglet.figlet_format("\tPrivate\n\tBook"))
+    print(ran, pyfiglet.figlet_format("\tWordList\n\tGen"))
     print(ran + "\t\tV_3.0\t\n\n")
     print("*" * 63)
 
