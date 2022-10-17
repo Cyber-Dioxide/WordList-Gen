@@ -124,9 +124,9 @@ while cont != "n" and "no":
         view()
     elif choice == "3":
         print(ran + "\n\tDont Forget to do following tasks :-)\t\n")
-     print(Style.BRIGHT + Fore.LIGHTCYAN_EX, "\n", "- " * 4, " [+] Follow me on Instagram @cyber_dioxide ", "- " * 4)
-    print(Style.BRIGHT + Fore.LIGHTYELLOW_EX, "\n", "- " * 4, " [+] Follow me on Instagram @cyber_dioxide_ ", "- " * 4)
-    print(Style.BRIGHT + Fore.LIGHTRED_EX, "\n", "- " * 4, "[+] Github: https://github.com/Cyber-Dioxide/ ", "- " * 3)
+        print(Style.BRIGHT + Fore.LIGHTCYAN_EX, "\n", "- " * 4, " [+] Follow me on Instagram @cyber_dioxide ", "- " * 4)
+        print(Style.BRIGHT + Fore.LIGHTYELLOW_EX, "\n", "- " * 4, " [+] Follow me on Instagram @cyber_dioxide_ ", "- " * 4)
+        print(Style.BRIGHT + Fore.LIGHTRED_EX, "\n", "- " * 4, "[+] Github: https://github.com/Cyber-Dioxide/ ", "- " * 3)
         exit()
 
     else:
