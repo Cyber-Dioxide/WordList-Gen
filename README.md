@@ -1,6 +1,9 @@
 # WordList-Gen
 Create unlimited passwords to brute force any account! This tool is created only for educational purpose.
 
+# Service
+* Get the 14M passwords list containing worlds mostly used passwords, dm me on instagram @coding_memz.
+* Get the worlds best hacking course, dm me on instagram @coding_memz
 # Usage
 1. apt install python3
 2. apt install cat
